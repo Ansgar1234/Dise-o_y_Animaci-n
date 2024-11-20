@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deformación Ondulatoria</title>
+  <style>
+    body {
+      margin: 0;
+      background: #191919;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .wave {
+      width: 200px;
+      height: 200px;
+      background: #33ff99;
+      border-radius: 50%;
+      animation: jelly 3s infinite;
+    }
+
+    @keyframes jelly {
+      0%, 100% { transform: scale(1); border-radius: 50%; }
+      25% { transform: scaleX(1.2) scaleY(0.8); border-radius: 60% 40% 50% 50%; }
+      50% { transform: scaleX(0.8) scaleY(1.2); border-radius: 40% 60% 50% 50%; }
+      75% { transform: scale(1.1); border-radius: 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wave"></div>
+</body>
+</html>
